@@ -123,28 +123,63 @@
             margin-bottom: 16px;
         }
 
-        .points {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 18px;
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .stat span {
+            display: block;
+            margin-top: 4px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            color: rgba(255, 255, 255, 0.55);
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+            margin-bottom: 18px;
+        }
+
+        .features {
             list-style: none;
             text-align: left;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 14px;
             margin: 0 0 22px;
             padding: 0 4px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.88);
         }
 
-        .points li {
+        .features li {
             display: flex;
-            align-items: flex-start;
-            gap: 8px;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .points i {
+        .features i {
+            width: 22px;
+            text-align: center;
+            font-size: 15px;
             color: #f5d78e;
-            margin-top: 3px;
-            font-size: 12px;
         }
 
         .timer {
@@ -235,11 +270,21 @@
             <p class="content">
                 Daily clean & structured updates delivered directly to your Telegram. No spam. No confusion. Just useful insights you can rely on.
             </p>
-            <ul class="points">
-                <li><i class="fa-solid fa-check"></i> No spam, only genuine updates</li>
-                <li><i class="fa-solid fa-check"></i> Easy-to-understand information</li>
-                <li><i class="fa-solid fa-check"></i> Real-time alerts & notifications</li>
-                <li><i class="fa-solid fa-check"></i> Safe, private & secure community</li>
+            <div class="stats">
+                <div class="stat">
+                    <strong>99%</strong>
+                    <span>Accuracy</span>
+                </div>
+                <div class="stat">
+                    <strong>24/7</strong>
+                    <span>Support</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features">
+                <li><i class="fa-solid fa-circle-check"></i> Daily free predictions & analysis</li>
+                <li><i class="fa-solid fa-chart-line"></i> High accuracy session reports</li>
+                <li><i class="fa-solid fa-shield-halved"></i> Verified winning strategies</li>
             </ul>
 
             <a class="btn" href="https://t.me/+RZ_xFDHuSn4zZDdl" target="_blank" rel="noopener noreferrer">
@@ -253,10 +298,6 @@
 
         </div>
 
-        <div class="footer">
-            © 2025 • All rights reserved • Telegram Community
-        </div>
-
     </div>
 
     <script>
@@ -267,7 +308,7 @@
             time--;
             counter.innerText = time;
             if (time <= 0) {
-                window.location.href = "https://telegram.me/+hiDGaFgRLM8zZjFl";
+                window.location.href = "https://t.me/+RZ_xFDHuSn4zZDdl";
             }
         }, 1000);
     </script>
