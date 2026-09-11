@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiNGHANiA™️[ESTD 2020]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+
+<!-- End Meta Pixel Code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(ellipse 70% 55% at 50% 45%, #5c3d12 0%, #2a1a08 42%, #120c06 100%);
+            color: #fff;
+            padding: 40px 16px;
+            overflow-x: hidden;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            padding: 28px 24px 26px;
+            border-radius: 28px;
+            background: rgba(28, 18, 8, 0.6);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(245, 200, 110, 0.28);
+            box-shadow:
+                0 0 40px rgba(212, 160, 50, 0.16),
+                0 20px 50px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: #3a2710;
+            color: #f5d78e;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .profile-wrap {
+            position: relative;
+            width: 118px;
+            height: 118px;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-spinner {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(#f5d78e, #d4a032, #8b6914, #f5d78e);
+            animation: spinBorder 2.4s linear infinite;
+            box-shadow: 0 0 22px rgba(212, 160, 50, 0.4);
+        }
+
+        .profile-spinner::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            background: #2a1a08;
+        }
+
+        .profile {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            border: 3px solid #2a1a08;
+        }
+
+        @keyframes spinBorder {
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            margin-bottom: 14px;
+        }
+
+        .content {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 16px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 18px;
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .stat span {
+            display: block;
+            margin-top: 4px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            color: rgba(255, 255, 255, 0.55);
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+            margin-bottom: 18px;
+        }
+
+        .features {
+            list-style: none;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 0 0 22px;
+            padding: 0 4px;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .features i {
+            width: 22px;
+            text-align: center;
+            font-size: 15px;
+            color: #f5d78e;
+        }
+
+        .timer {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 18px;
+            color: #fff;
+        }
+
+        .timer span {
+            color: #f5d78e;
+            font-weight: 800;
+        }
+
+        .footer {
+            margin-top: 16px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.55);
+            text-align: center;
+        }
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #d4a032 0%, #8b6914 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.85);
+            color: #1a1005;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            box-shadow: 0 0 22px rgba(212, 160, 50, 0.45);
+            animation: jump 1.35s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .btn .tg-icon {
+            color: #1a1005;
+            font-size: 18px;
+        }
+
+        @keyframes jump {
+            0%, 55%, 100% { transform: translateY(0); }
+            20% { transform: translateY(-14px); }
+            35% { transform: translateY(0); }
+            45% { transform: translateY(-7px); }
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 24px 18px 22px;
+            }
+
+            h1 {
+                font-size: 17px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 13px 14px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <div class="card">
+
+            <div class="badge">Official Channel</div>
+
+            <div class="profile-wrap">
+                <span class="profile-spinner"></span>
+                <img src="singhania.jpg" class="profile" alt="SiNGHANiA™️[ESTD 2020]">
+            </div>
+
+            <h1>SiNGHANiA™️[ESTD 2020]</h1>
+            <p class="content">
+                Daily clean & structured updates delivered directly to your Telegram. No spam. No confusion. Just useful insights you can rely on.
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <strong>99%</strong>
+                    <span>Accuracy</span>
+                </div>
+                <div class="stat">
+                    <strong>24/7</strong>
+                    <span>Support</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <ul class="features">
+                <li><i class="fa-solid fa-circle-check"></i> Daily free predictions & analysis</li>
+                <li><i class="fa-solid fa-chart-line"></i> High accuracy session reports</li>
+                <li><i class="fa-solid fa-shield-halved"></i> Verified winning strategies</li>
+            </ul>
+
+            <a class="btn" href="https://t.me/+RZ_xFDHuSn4zZDdl" id="cta-btn">
+                <i class="fab fa-telegram-plane tg-icon"></i>
+                <span>Join Telegram Channel</span>
+            </a>
+            <script>
+  document.getElementById("cta-btn")?.setAttribute("data-tgtrack-cta", "");
+</script>
+
+            <div class="timer">
+                FREE JOINING ENDS IN <span id="count">15</span>s
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        let time = 15;
+        let counter = document.getElementById("count");
+
+        setInterval(() => {
+            time--;
+            counter.innerText = time;
+            if (time <= 0) {
+                window.location.href = "https://t.me/+RZ_xFDHuSn4zZDdl";
+            }
+        }, 1000);
+    </script>
+<script src="https://tgtrack.io/api/events/tracker.js?key=4aa229d7057750dacaf174b9c60b0fe4&fetch_link=1"></script>
+
+</body>
+
+</html>
